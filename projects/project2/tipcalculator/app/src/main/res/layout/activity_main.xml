@@ -16,31 +16,34 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcButton" />
 
     <Button
         android:id="@+id/tipCalcButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="229dp"
         android:text="@string/calculate_tip"
+        app:layout_constraintBottom_toTopOf="@+id/tipCalcText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcInputBox" />
 
     <EditText
         android:id="@+id/tipCalcInputBox"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="87dp"
-        android:layout_marginTop="98dp"
-        android:autofillHints="@string/enter_bill_total"
         android:ems="10"
+        android:hint="@string/enter_bill_total"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
-        android:text="@string/enter_bill_total"
+        android:labelFor="@id/tipCalcInputBox"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:ignore="LabelFor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
